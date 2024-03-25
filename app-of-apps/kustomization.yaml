@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  rhtap/gitops: regulatory-hoverfly-nodejs 
+  janus-idp.io/tekton: regulatory-hoverfly-nodejs
+  backstage.io/kubernetes-id: regulatory-hoverfly-nodejs
+  backstage.io/kubernetes-namespace: rhtap-app 
+  app.kubernetes.io/part-of: regulatory-hoverfly-nodejs
+resources: 
+- application-dev.yaml 
+- application-stage.yaml 
+- application-prod.yaml  
